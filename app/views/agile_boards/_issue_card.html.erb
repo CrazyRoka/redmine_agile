@@ -69,7 +69,7 @@
           <% if @query.has_column_name?(:thumbnails) || issue.attachments.select(&:thumbnailable?).size > 0 %>
             <% image = issue.attachments.select(&:thumbnailable?).last %>
             <% if image %>
-            <div class="thumbnail" style="background-image: url('<%= thumbnail_path(image, :size => 250) %>')">
+            <div class="thumbnail" style="width: 80%; background-image: url('<%= thumbnail_path(image, :size => 250) %>')">
             </div>
             <% end %>
           <% end %>
